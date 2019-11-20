@@ -1,0 +1,9 @@
+<div class="container mt-4">
+    <div class="col-md-3 card card-body float-left" style="height:300px;"
+    *ngFor='let product of products'>
+    <img [src]="product.imageUrl" class="img-fluid" alt="">
+    <p class ="text-centre">Name:{{product.name}}</p>
+    <p appColor>price:{{product.price}}₹</p>
+    <p appColor>details:{{product.details}}</p>
+</div>
+</div>

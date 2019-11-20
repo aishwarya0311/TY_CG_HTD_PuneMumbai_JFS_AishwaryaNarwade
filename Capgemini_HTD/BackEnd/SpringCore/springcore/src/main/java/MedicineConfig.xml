@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<!--Configuration for Set -->
+	
+	<bean id="medicine"
+		class="com.capg.springcore.annotations.beans.Medicine">
+		<property name="name" value="Crocine" />
+		<property name="price" value="50.55" />
+		<property name="type" value="Allopathic" />
+		<property name="drugset">
+		<set>
+		<value>Hydrofluro</value> 
+		<value>Paracetamol</value> 
+		<value>Sodium</value> 
+		</set>
+		</property>
+	</bean>
+	
+	
+
+	<!-- Configuration for List -->
+	
+	<!-- <bean id="medicine" class="com.capg.springcore.annotations.beans.Medicine"> 
+		<property name="name" value="Crocine" /> 
+		<property name="price" value="50.55" /> 
+		<property name="type" value="Allopathic" /> 
+		<property name="drugs"> 
+		<list> 
+		<value>Hydrofluro</value> 
+		<value>Paracetamol</value> 
+		<value>Sodium</value> 
+		</list>
+		 </property>
+		  </bean> -->
+</beans>

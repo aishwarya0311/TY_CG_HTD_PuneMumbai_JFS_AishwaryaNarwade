@@ -1,0 +1,43 @@
+<div class="container mt-4">
+    <table class="table table-bordered table hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Index</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Degree</th> 
+                <th>Delete</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of student; index as i"
+            [ngClass]="{'bg-success':student.name.length>6,
+            'bg-danger':student.name.length<=6}"
+            [ngStyle]="{'color': student.name.length>6?'white':'black'}">
+                <td>{{i+1}}</td>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.degree}}</td>
+                <td><button class ="btn btn-primary" (click)='deleteStudent(student)'>Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- <div *ngIf='flag'>The Flagis If</div> -->
+<!-- *ngIf structural directive -->
+<div *ngIf='flag; then trueBlock else falseBlock'></div>
+<ng-template #trueBlock>This is True Block</ng-template>
+<ng-template #falseBlock>This is False Block</ng-template>
+
+<!-- *ngswitchcase structural directive -->
+<div [ngSwitch]='person'>
+    <div *ngSwitchCase='"Aishwarya"'>The person is Aishwarya</div>
+    <div *ngSwitchCase='"Saky"'>The person is Saky</div>
+
+    <div *ngSwitchCase='"Jyoti"'>The person is Jyoti</div>
+
+    <div *ngSwitchCase='"Pralhad"'>The person is Pralhad</div>
+
+</div>

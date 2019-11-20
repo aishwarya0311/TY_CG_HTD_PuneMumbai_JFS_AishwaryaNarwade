@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mobile" class="com.capg.springcore.beans.Mobile">
+		<property name="brandName" value="Redmi"></property>
+		<property name="modelName" value="Note 4"></property>
+		<property name="price" value= "21999"></property>
+		<property name="mobiledisplay" ref="display"></property>
+	</bean>
+	
+	<!-- <bean id="mobile" class="com.capg.springcore.beans.Mobile" autowire="byName">
+		<property name="brandName" value="Redmi"></property>
+		<property name="modelName" value="Note 4"></property>
+		<property name="price" value= "21999"></property>
+	</bean> -->
+	
+	<!-- <bean id="display" class="com.capg.springcore.beans.MobileDisplay" autowire="byType"> 
+		<property name="displaysize" value="10"></property>
+		<property name="resolution" value="20px"></property>
+	</bean> -->
+	
+	<bean id="mobiledisplay" class="com.capg.springcore.beans.MobileDisplay">
+		<property name="displaysize" value="10"></property>
+		<property name="resolution" value="20px"></property>
+	</bean>
+		</beans>
