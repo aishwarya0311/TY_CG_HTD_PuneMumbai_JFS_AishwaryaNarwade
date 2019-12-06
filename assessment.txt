@@ -1,0 +1,4 @@
+dbUrl = jdbc:mysql://127.0.0.1:3306/gmail
+user= J2EE
+password=tiger
+query= select * from account where email=? & password=?
